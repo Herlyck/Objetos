@@ -24,20 +24,7 @@ function main() {
     console.log(DIAS[dia]);
 
 
-    // for (let i = 0; i <1 ; i++) {
-    //     matriz.push([{}]);   => [ {objeto:"casa" } ]
-    //     for (j = 0; j < 6; j++){
-    //        
-    //         matriz[dia][0].tarea;
-    //         matriz[dia][0].fecha;
-    //         matriz[dia][0].estado;
-    
-    //     }
-
-    // }
-    // console.log(tarea.tarea);
-    // console.log(tarea.fecha);
-
+   
     console.log(matriz[dia][0].tarea);
     console.log(matriz[dia][0].fecha);
     console.log(matriz[dia][0].estado);
