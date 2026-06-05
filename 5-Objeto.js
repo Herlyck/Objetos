@@ -1,18 +1,27 @@
 const leer = require("prompt-sync")();
 
-const OBJETO_1="A";
-const OBJETO_2="B";
-const OBJETO_3="C";
+const VALOR="A";
+const VALOR2="B";
+const VALOR3="C";
 
 function main() {
     
     const objeto = {
-        letra:OBJETO_3,
-        letra2:OBJETO_2,
-        letra3:OBJETO_1       
+        letra:VALOR,
+        letra2:VALOR2,
+        letra3:VALOR3       
 
     };
     
+
+
+    [objeto.letra,objeto.letra3]=[objeto.letra3,objeto.letra];
     console.log(objeto);
 }
 main();
+
+  
+  
+
+ 
+
