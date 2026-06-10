@@ -40,10 +40,8 @@ function main() {
         
     }
     console.log(matriz);
-    console.log(matriz[opcion][0].fecha)
+    // console.log(matriz[opcion][0].fecha)
 
-    // matriz[opcion][0].fecha
-    // nuevaTareas.fecha
 
 }
 main();
