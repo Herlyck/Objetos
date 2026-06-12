@@ -3,72 +3,43 @@ const DIAS = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Do
 
 const SIN_TERMINAR = "sin terminar";
 const TERMINADO = "Terminado";
+
 function main() {
     let tareas = [
         [{ tarea: "lavar ropa", fecha: "02/03/2025", estado: SIN_TERMINAR }, { tarea: "jugar con mascota", fecha: "02/03/2025", estado: SIN_TERMINAR }], //0
         [],//1
         [{ tarea: "Ordenar Cuarto", fecha: "02/03/2025", estado: SIN_TERMINAR }, { tarea: "Hacer Ejercicio", fecha: "02/03/2025", estado: SIN_TERMINAR }],//2
-        [],//3
-        [],//4
-        [],//5
-        []//6
-
+        [],
+        [],
+        [],
+        []
     ];
-
 
     let opcion = 0;
     let elegirTarea = 0;
     let propiedadActualizar = 0;
     let confirmacionActualizar = 0;
-    const diasConTareas = 0;
+    let item = 0;
+
+    console.log("***Mostrando tareas de todos los días de la semana***");
 
 
-    console.log("seleccione un dia 0-6");
-    opcion = Number(leer());
+    for (let i = 0; i < tareas.length; i++) {
 
-    console.log("mostrando tareas del dia:", DIAS[opcion])
-    console.log("1-", tareas[opcion][0].tarea);
-    console.log("2-", tareas[opcion][1].tarea);
+        if (tareas[i].length > 0) {
+            console.log("    - " + DIAS[i] + ":");
 
-    console.log("seleccione una tarea:")
-    elegirTarea = Number(leer()) - 1;
+            
+            for (let j = 0; j < tareas[i].length; j++) {
+                item = tareas[i][j]; 
 
-    console.log("propiedades en ", tareas[opcion][elegirTarea].tarea, tareas[opcion][elegirTarea]);
-
-    console.log("desea actualizar? s/n");
-    confirmacionActualizar = leer().toLowerCase();
-
-    if (confirmacionActualizar === "s") {
-        console.log("propiedad a Actualizar:");
-        propiedadActualizar = leer();
-        tareas[opcion][elegirTarea][propiedadActualizar] = TERMINADO;
-
+                console.log("        " + (j + 1) + ". " + item.tarea);
+                console.log("            - fechaInicio: " + item.fecha);
+                console.log("            - " + item.estado);
+            }
+        }
 
     }
-
-
-    diasConTareas=tareas.filter(dia => dia.length > 0);
-    console.log("Matriz filtrada (solo días con tareas):");
-    console.log(diasConTareas);
 }
+
 main();
-
-    // console.log(tareas);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Filtra y deja solo los días cuya longitud de tareas sea mayor a 0
