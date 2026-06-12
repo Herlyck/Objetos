@@ -38,7 +38,7 @@ function main() {
     confirmacionActualizar=leer().toLowerCase();
 
     if (confirmacionActualizar === "s" ){
-        console.log("propiedad a Actualizar:");
+        console.log("propiedad a Actualizada:");
         
          tareas[opcion][elegirTarea].estado=TERMINADO;
     }else{
