@@ -19,7 +19,8 @@ function main() {
     let opcion = 0;
     let elegirTarea = 0;
     let propiedadActualizar = 0;
-    let confirmacionActualizar=0;
+    let confirmacionActualizar = 0;
+    const diasConTareas = 0;
 
 
     console.log("seleccione un dia 0-6");
@@ -35,27 +36,39 @@ function main() {
     console.log("propiedades en ", tareas[opcion][elegirTarea].tarea, tareas[opcion][elegirTarea]);
 
     console.log("desea actualizar? s/n");
-    confirmacionActualizar=leer().toLowerCase();
+    confirmacionActualizar = leer().toLowerCase();
 
-    if (confirmacionActualizar === "s" ){
+    if (confirmacionActualizar === "s") {
         console.log("propiedad a Actualizar:");
-        
-         tareas[opcion][elegirTarea].estado=TERMINADO;
-    }else{
-        console.log("no se actualizo nada");
-        
+        propiedadActualizar = leer();
+        tareas[opcion][elegirTarea][propiedadActualizar] = TERMINADO;
+
+
     }
 
-    console.log(tareas);
-    
-    
 
-
-
-
-
-
-
-
+    diasConTareas=tareas.filter(dia => dia.length > 0);
+    console.log("Matriz filtrada (solo días con tareas):");
+    console.log(diasConTareas);
 }
 main();
+
+    // console.log(tareas);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Filtra y deja solo los días cuya longitud de tareas sea mayor a 0
